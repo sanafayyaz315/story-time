@@ -8,7 +8,7 @@ import tiktoken
 import os
 import math
 import glob
-from data import tokenize_data, load_tokenized_data, get_batch
+from data import tokenize_data, load_tokenized_data, get_batch, download_tinystories
 from model import GPTTransformer
 from utils import load_or_tokenize, estimate_loss, save_checkpoint, load_latest_checkpoint, get_lr
 
@@ -58,6 +58,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # tokenize train and val splits and save .bin files
 token_dir = "../data/tokenized/tiny_stories"
+data_dir = "../data"
 train_data_path = '../data/TinyStories-train.txt'
 valid_data_path = '../data/TinyStories-valid.txt'
 train_save_path = '../data/tokenized/tiny_stories/train/train'
@@ -131,6 +132,8 @@ def train(model, train_data, val_data, optimizer, device, checkpoint_dir, checkp
     return model
 
 if __name__ == "__main__":
+    ##-------------------------------Download Data-------------------------------------##
+    download_tinystories(data_dir=data_dir)
 
     ##-------------------------------TOKENIZATION-------------------------------------##
     # tokenize data
