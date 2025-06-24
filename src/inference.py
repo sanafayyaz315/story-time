@@ -1,3 +1,7 @@
+## USE THE FOLLOWING LINK TO DOWNLOAD WEIGHTS FROM GOOGLE DRIVE AND PLACE THE FILE IN THE CHECKPOINTS FOLDER
+## https://drive.google.com/file/d/1JZ7qipP-0NpZQOA8v7bmsIzM6iCLGvR_/view?usp=sharing
+
+
 # importing libraries and modules
 import sys
 import torch

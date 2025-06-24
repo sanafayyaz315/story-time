@@ -1,3 +1,6 @@
+## Before running app.py, make sure you have downloaded weights and placed them in the checkpoints folder. 
+## Link to weights: https://drive.google.com/file/d/1JZ7qipP-0NpZQOA8v7bmsIzM6iCLGvR_/view?usp=sharing
+
 from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
